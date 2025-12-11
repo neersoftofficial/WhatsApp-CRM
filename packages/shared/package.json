@@ -1,7 +1,14 @@
 {
-  "name": "@whatsapp-crm/shared",
-  "version": "0.1.0",
+  "name": "whatsapp-crm",
   "private": true,
-  "main": "src/index.js",
-  "license": "MIT"
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace=apps/web run dev",
+    "dev:worker": "npm --workspace=apps/worker run dev",
+    "install:all": "npm install"
+  }
 }
